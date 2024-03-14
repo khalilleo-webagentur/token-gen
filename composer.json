@@ -1,0 +1,37 @@
+{
+  "name": "khalilleo-webagentur/token-gen",
+  "description": "PHP library for simple and secure generation of random tokens.",
+  "keywords": [
+    "token",
+    "string",
+    "generation",
+    "password",
+    "salt"
+  ],
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Khalilleo",
+      "email": "info@khalilleo.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {},
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Khalilleo\\TokenGen\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": []
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
