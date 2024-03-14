@@ -8,6 +8,7 @@
     "password",
     "salt"
   ],
+  "homepage": "https://github.com/khalilleo-webagentur",
   "type": "package",
   "license": "MIT",
   "authors": [
