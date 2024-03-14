@@ -8,7 +8,7 @@ PHP library for simple and secure generation of random tokens.
 
 ### Installation
 
-`composer require khalilleo/token-gen`
+`composer require khalilleo-webagentur/token-gen`
 
 ### Usage
 
