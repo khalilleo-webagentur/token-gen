@@ -29,11 +29,19 @@ final class Token
         return $this->generate(CharSet::UPPER_LETTERS, $length);
     }
 
-    public function getRandomApiToken(int $length = self::LENGTH): string
+    public function getRandomApiToken(): string
     {
-        $chars = str_shuffle(CharSet::UPPER_LETTERS . CharSet::DIGITS . CharSet::LOWER_LETTERS);
+        $data = random_bytes(16);
+        $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
+        $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
 
-        return $this->generate($chars, $length);
+        return sprintf('%s-%s-%s-%s-%s',
+            bin2hex(substr($data, 0, 4)),
+            bin2hex(substr($data, 4, 2)),
+            bin2hex(substr($data, 6, 2)),
+            bin2hex(substr($data, 8, 2)),
+            bin2hex(substr($data, 10, 6))
+        );
     }
 
     public function getRandomDigits(int $length): int

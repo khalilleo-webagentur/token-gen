@@ -38,7 +38,7 @@ var_dump($token->getRandomTokenOnlyLowers(7)); // Returns something like 'pcstke
 
 var_dump($token->getRandomTokenOnlyUppers(20)); // Returns something like 'QVYRPUZGTOESJXLWICMA'
 
-var_dump($token->getRandomApiToken()); // Returns something like '3SaNHvMndKCOBgIRPUw7XkAmTWypGri4'
+var_dump($token->getRandomApiToken()); // Returns something like '90b1230f-e510-4af2-9b65-a7928bb1c1cd'
 
 var_dump($token->getRandomDigits(8)); // Returns something like '65347092'
 
